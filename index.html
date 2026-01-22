@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lucky Dadlani - Backend Engineering Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3b82f6", 
+              "primary-dim": "rgba(59, 130, 246, 0.1)",
+              "accent": "#60a5fa",
+              "background-light": "#f8fafc",
+              "background-dark": "#0f1115","surface-dark": "#161b22",
+              "surface-lighter": "#1c2128",
+              "border-dark": "#30363d",
+              "text-secondary": "#8b949e",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "mono": ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #30363d 1px, transparent 1px), linear-gradient(to bottom, #30363d 1px, transparent 1px)",
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        html { scroll-behavior: smooth; }
+        .glass-nav {
+            background-color: rgba(15, 17, 21, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }.arrow-right::after {
+            content: '';
+            display: block;
+            width: 0; 
+            height: 0; 
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 6px solid #3b82f6;
+            margin-left: -2px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-white">
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-border-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<a class="flex items-center gap-2 group" href="#">
+<div class="size-8 rounded bg-primary/20 flex items-center justify-center text-primary border border-primary/30 font-mono text-xl font-bold">
+                    &lt;/&gt;
+                </div>
+<span class="text-white text-lg font-bold tracking-tight font-mono">LD.java</span>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-text-secondary hover:text-white text-sm font-medium transition-colors" href="#about">About</a>
+<a class="text-text-secondary hover:text-white text-sm font-medium transition-colors" href="#skills">Skills</a>
+<a class="text-text-secondary hover:text-white text-sm font-medium transition-colors" href="#projects">Projects</a>
+<a class="text-text-secondary hover:text-white text-sm font-medium transition-colors" href="#experience">Experience</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<a aria-label="LinkedIn" class="text-text-secondary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">link</span>
+</a>
+<a aria-label="GitHub" class="text-text-secondary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+<a class="flex items-center justify-center rounded-md h-9 px-4 bg-primary text-white text-xs font-bold uppercase tracking-wider hover:bg-blue-600 transition-colors" href="#contact">
+                    Contact
+                </a>
+</div>
+</div>
+</div>
+</header>
+<main class="relative flex flex-col items-center pt-16">
+<section class="w-full max-w-6xl px-4 py-24 md:py-32 flex flex-col items-start min-h-[85vh] relative overflow-hidden" id="hero">
+<div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style="background-size: 40px 40px; background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px);"></div>
+<div class="relative z-10 max-w-4xl space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+</span>
+<span class="text-primary text-xs font-mono font-medium">Available for hire</span>
+</div>
+<div class="space-y-4">
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter text-white">
+                    Lucky Dadlani
+                </h1>
+<h2 class="text-xl md:text-2xl font-mono text-accent font-medium leading-relaxed">
+                    Java Backend Engineer <span class="text-border-dark">|</span> Spring Boot <span class="text-border-dark">|</span> Microservices <span class="text-border-dark">|</span> Event-Driven Systems
+                </h2>
+</div>
+<p class="text-lg text-text-secondary leading-relaxed max-w-2xl">
+                I design and build robust, scalable backend architectures. With a deep focus on system design and performance optimization, I turn complex business requirements into efficient, maintainable code.
+            </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="flex items-center justify-center h-12 px-8 rounded bg-white text-background-dark font-bold hover:bg-slate-200 transition-all font-mono text-sm" href="#projects">
+                    View Case Studies
+                </a>
+<a class="flex items-center justify-center h-12 px-8 rounded bg-surface-lighter border border-border-dark text-white font-bold hover:border-primary transition-all font-mono text-sm group" href="#">
+                    Resume
+                    <span class="material-symbols-outlined ml-2 text-[18px] group-hover:translate-y-1 transition-transform">download</span>
+</a>
+</div>
+<div class="flex gap-6 pt-6 border-t border-border-dark/50 mt-8 w-full md:w-auto">
+<a class="text-text-secondary hover:text-white flex items-center gap-2 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">mail</span> email@luckydadlani.dev
+                </a>
+<a class="text-text-secondary hover:text-white flex items-center gap-2 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span> Bengaluru, India
+                </a>
+</div>
+</div>
+</section>
+<section class="w-full bg-surface-dark border-y border-border-dark" id="about">
+<div class="max-w-6xl mx-auto px-4 py-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<h2 class="text-3xl font-bold flex items-center gap-3">
+<span class="text-primary material-symbols-outlined text-3xl">psychology</span>
+                        Engineering Mindset
+                    </h2>
+<p class="text-text-secondary leading-relaxed">
+                        My approach to engineering goes beyond just writing code. I focus on <span class="text-white font-medium">data flow efficiency</span>, <span class="text-white font-medium">fault tolerance</span>, and <span class="text-white font-medium">modularity</span>. I believe in building systems that are observable by default and resilient by design.
+                    </p>
+<p class="text-text-secondary leading-relaxed">
+                        Whether it's orchestrating microservices or optimizing database queries, every decision is backed by a trade-off analysis of consistency vs. availability vs. partition tolerance.
+                    </p>
+</div>
+<div class="relative bg-background-dark p-8 rounded-xl border border-border-dark">
+<div class="absolute top-3 left-4 text-xs font-mono text-border-dark">system_arch_v1.drawio</div>
+<div class="flex flex-col gap-6 mt-4">
+<div class="flex justify-center">
+<div class="px-6 py-3 border border-primary/40 bg-primary/5 rounded text-sm font-mono text-primary shadow-[0_0_15px_rgba(59,130,246,0.1)]">
+                                REST API Gateway
+                            </div>
+</div>
+<div class="flex justify-center items-center gap-4 relative">
+<div class="absolute -top-6 left-1/2 w-px h-6 bg-border-dark"></div>
+<div class="flex items-center gap-2">
+<div class="w-16 h-10 border border-orange-500/40 bg-orange-500/5 rounded text-xs font-mono text-orange-400 flex items-center justify-center">
+                                    Kafka
+                                </div>
+<div class="w-8 h-px bg-border-dark flex items-center justify-end"><div class="arrow-right"></div></div>
+<div class="w-20 h-10 border border-purple-500/40 bg-purple-500/5 rounded text-xs font-mono text-purple-400 flex items-center justify-center">
+                                    Consumer
+                                </div>
+</div>
+</div>
+<div class="flex justify-center gap-8 relative">
+<div class="absolute -top-6 left-[65%] w-px h-6 bg-border-dark"></div>
+<div class="flex flex-col gap-2 items-center">
+<div class="w-px h-4 bg-border-dark"></div>
+<div class="px-4 py-2 border border-red-500/40 bg-red-500/5 rounded text-xs font-mono text-red-400">
+                                    Redis Cache
+                                </div>
+</div>
+<div class="flex flex-col gap-2 items-center">
+<div class="w-px h-4 bg-border-dark"></div>
+<div class="px-4 py-2 border border-blue-500/40 bg-blue-500/5 rounded text-xs font-mono text-blue-400">
+                                    PostgreSQL
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full max-w-6xl px-4 py-20" id="skills">
+<h2 class="text-3xl font-bold mb-10 text-white">Technical Proficiency</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<div class="bg-surface-lighter p-6 rounded-lg border border-border-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-center gap-3 mb-4 text-primary">
+<span class="material-symbols-outlined">dns</span>
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">Backend &amp; Architecture</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="skill-pill">Java 17+</span>
+<span class="skill-pill">Spring Boot</span>
+<span class="skill-pill">Microservices</span>
+<span class="skill-pill">System Design</span>
+<span class="skill-pill">Event-Driven</span>
+<span class="skill-pill">REST APIs</span>
+</div>
+</div>
+<div class="bg-surface-lighter p-6 rounded-lg border border-border-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-center gap-3 mb-4 text-purple-400">
+<span class="material-symbols-outlined">database</span>
+<h3 class="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">Databases</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="skill-pill">MySQL</span>
+<span class="skill-pill">PostgreSQL</span>
+<span class="skill-pill">Redis</span>
+<span class="skill-pill">MongoDB</span>
+<span class="skill-pill">Query Optimization</span>
+</div>
+</div>
+<div class="bg-surface-lighter p-6 rounded-lg border border-border-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-center gap-3 mb-4 text-orange-400">
+<span class="material-symbols-outlined">cloud</span>
+<h3 class="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Cloud &amp; DevOps</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="skill-pill">AWS (EC2, S3)</span>
+<span class="skill-pill">Docker</span>
+<span class="skill-pill">Kubernetes</span>
+<span class="skill-pill">CI/CD Pipelines</span>
+<span class="skill-pill">Linux</span>
+</div>
+</div>
+<div class="bg-surface-lighter p-6 rounded-lg border border-border-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-center gap-3 mb-4 text-green-400">
+<span class="material-symbols-outlined">smart_toy</span>
+<h3 class="text-lg font-bold text-white group-hover:text-green-400 transition-colors">Automation &amp; AI</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="skill-pill">n8n Workflows</span>
+<span class="skill-pill">AI Integration</span>
+<span class="skill-pill">Python Scripting</span>
+<span class="skill-pill">Process Automation</span>
+</div>
+</div>
+<div class="bg-surface-lighter p-6 rounded-lg border border-border-dark hover:border-primary/50 transition-colors group">
+<div class="flex items-center gap-3 mb-4 text-pink-400">
+<span class="material-symbols-outlined">html</span>
+<h3 class="text-lg font-bold text-white group-hover:text-pink-400 transition-colors">Frontend Familiarity</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="skill-pill">HTML5/CSS3</span>
+<span class="skill-pill">JavaScript</span>
+<span class="skill-pill">Tailwind CSS</span>
+<span class="skill-pill">Basic React</span>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full bg-surface-dark border-t border-border-dark" id="projects">
+<div class="max-w-6xl mx-auto px-4 py-20">
+<h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+<span class="text-primary material-symbols-outlined text-3xl">deployed_code</span>
+                Engineering Case Studies
+            </h2>
+<div class="space-y-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-border-dark/50 pb-16 last:border-0 last:pb-0">
+<div class="lg:col-span-5 space-y-6">
+<div class="flex items-center gap-4">
+<h3 class="text-3xl font-bold text-white">HEMANET</h3>
+<span class="px-2 py-1 rounded text-xs font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20">Discovery Platform</span>
+</div>
+<p class="text-text-secondary leading-relaxed">
+                            A high-availability discovery service designed to handle rapid data ingestion and retrieval. The core challenge was minimizing latency during peak load while ensuring data consistency across distributed nodes.
+                        </p>
+<div class="p-4 bg-background-dark border border-green-500/20 rounded-lg flex items-start gap-3">
+<span class="material-symbols-outlined text-green-500 mt-1">monitoring</span>
+<div>
+<h4 class="text-sm text-text-secondary uppercase tracking-widest font-bold">Impact Metric</h4>
+<p class="text-xl font-bold text-white mt-1">Reduced discovery time by 40-60%</p>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<a class="text-white hover:text-primary font-mono text-sm underline decoration-primary/50 underline-offset-4" href="#">View Source Code</a>
+<a class="text-white hover:text-primary font-mono text-sm underline decoration-primary/50 underline-offset-4" href="#">System Diagram</a>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="bg-background-dark rounded-xl border border-border-dark p-6 h-full flex flex-col justify-between">
+<div>
+<h4 class="text-sm font-mono text-text-secondary uppercase mb-4 border-b border-border-dark pb-2">Architecture Stack</h4>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="space-y-2">
+<div class="text-xs text-text-secondary">Core Service</div>
+<div class="font-mono text-sm text-white">Java, Spring Boot</div>
+</div>
+<div class="space-y-2">
+<div class="text-xs text-text-secondary">Data Store</div>
+<div class="font-mono text-sm text-white">MySQL (Persistence)</div>
+</div>
+<div class="space-y-2">
+<div class="text-xs text-text-secondary">Event Bus</div>
+<div class="font-mono text-sm text-white">Apache Kafka</div>
+</div>
+<div class="space-y-2">
+<div class="text-xs text-text-secondary">Caching</div>
+<div class="font-mono text-sm text-white">Redis Cluster</div>
+</div>
+<div class="space-y-2">
+<div class="text-xs text-text-secondary">Workflow Automation</div>
+<div class="font-mono text-sm text-white">n8n</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-lighter rounded p-4 font-mono text-xs text-text-secondary overflow-x-auto">
+<span class="text-primary">User</span> -&gt; <span class="text-accent">API</span> -&gt; <span class="text-orange-400">Kafka</span> -&gt; <span class="text-purple-400">Service</span> -&gt; <span class="text-red-400">Redis</span>/<span class="text-blue-400">MySQL</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-5 space-y-6">
+<div class="flex items-center gap-4">
+<h3 class="text-3xl font-bold text-white">Qala</h3>
+<span class="px-2 py-1 rounded text-xs font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20">Enterprise AI</span>
+</div>
+<p class="text-text-secondary leading-relaxed">
+                            An enterprise-grade platform integrating AI capabilities into legacy workflows. Focused heavily on security compliance and robust error handling for non-deterministic AI outputs.
+                        </p>
+<div class="p-4 bg-background-dark border border-green-500/20 rounded-lg flex items-start gap-3">
+<span class="material-symbols-outlined text-green-500 mt-1">trending_down</span>
+<div>
+<h4 class="text-sm text-text-secondary uppercase tracking-widest font-bold">Impact Metric</h4>
+<p class="text-xl font-bold text-white mt-1">Reduced operational errors by 30%</p>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<a class="text-white hover:text-primary font-mono text-sm underline decoration-primary/50 underline-offset-4" href="#">View Case Study</a>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="bg-background-dark rounded-xl border border-border-dark p-6 h-full flex flex-col justify-between">
+<div>
+<h4 class="text-sm font-mono text-text-secondary uppercase mb-4 border-b border-border-dark pb-2">Technical Focus</h4>
+<ul class="space-y-4 mb-6">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">verified_user</span>
+<div>
+<span class="text-white text-sm font-bold block">Spring Security Implementation</span>
+<span class="text-xs text-text-secondary">Role-based access control (RBAC) and OAuth2 integration for secure enterprise access.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">psychology</span>
+<div>
+<span class="text-white text-sm font-bold block">AI Service Integration</span>
+<span class="text-xs text-text-secondary">Wrapper services for LLM APIs with fallback mechanisms and response validation.</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="flex gap-2">
+<span class="text-xs font-mono px-2 py-1 bg-surface-lighter rounded border border-border-dark text-text-secondary">Java</span>
+<span class="text-xs font-mono px-2 py-1 bg-surface-lighter rounded border border-border-dark text-text-secondary">Spring Security</span>
+<span class="text-xs font-mono px-2 py-1 bg-surface-lighter rounded border border-border-dark text-text-secondary">OpenAI API</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full max-w-6xl px-4 py-20" id="experience">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">work_history</span> Experience
+                </h2>
+<div class="relative border-l border-border-dark ml-3 space-y-10">
+<div class="relative pl-8 group">
+<div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-background-dark group-hover:ring-primary/20 transition-all"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+<h3 class="text-lg font-bold text-white">Freelance Backend Engineer</h3>
+<span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Present</span>
+</div>
+<div class="text-sm text-text-secondary font-medium mb-3">Self-Employed</div>
+<ul class="list-disc list-outside ml-4 space-y-1 text-text-secondary text-sm leading-relaxed marker:text-border-dark">
+<li>Designing scalable REST APIs for diverse client needs.</li>
+<li>Implementing event-driven architectures using Kafka and Redis.</li>
+<li>Automating business workflows with n8n and scripting.</li>
+</ul>
+</div>
+<div class="relative pl-8 group">
+<div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-border-dark ring-4 ring-background-dark group-hover:bg-primary group-hover:ring-primary/20 transition-all"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+<h3 class="text-lg font-bold text-white">Secretary</h3>
+<span class="text-xs font-mono text-text-secondary bg-surface-lighter px-2 py-1 rounded">Past</span>
+</div>
+<div class="text-sm text-text-secondary font-medium mb-3">Theatre Club</div>
+<ul class="list-disc list-outside ml-4 space-y-1 text-text-secondary text-sm leading-relaxed marker:text-border-dark">
+<li>Managed club operations and coordinated large-scale events.</li>
+<li>Led a team of peers, fostering collaboration and creativity.</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">school</span> Education &amp; Awards
+                </h2>
+<div class="bg-surface-lighter border border-border-dark rounded-xl p-6 mb-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="text-white font-bold">B.E. Computer Science</h3>
+<p class="text-text-secondary text-sm">CMR Institute of Technology (CMRIT)</p>
+</div>
+<div class="text-right">
+<div class="text-2xl font-black text-white">9.0</div>
+<div class="text-xs text-text-secondary uppercase tracking-wider font-bold">CGPA</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-border-dark">
+<span class="text-xs font-mono text-primary">Relevant Coursework:</span>
+<p class="text-xs text-text-secondary mt-1">Distributed Systems, Database Management Systems, Data Structures &amp; Algorithms.</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-3 p-3 rounded hover:bg-surface-lighter transition-colors">
+<span class="material-symbols-outlined text-yellow-500 text-lg mt-0.5">emoji_events</span>
+<div>
+<h4 class="text-white text-sm font-bold">Hackathon Winner</h4>
+<p class="text-text-secondary text-xs">Recognized for 'Best Backend Architecture' in regional coding competition.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 rounded hover:bg-surface-lighter transition-colors">
+<span class="material-symbols-outlined text-yellow-500 text-lg mt-0.5">verified</span>
+<div>
+<h4 class="text-white text-sm font-bold">Java Certification</h4>
+<p class="text-text-secondary text-xs">Advanced Java Programming Mastery.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="w-full bg-surface-dark border-t border-border-dark py-12" id="contact">
+<div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-center md:text-left">
+<h2 class="text-2xl font-bold text-white mb-2">Let's build something scalable.</h2>
+<p class="text-text-secondary text-sm max-w-md mb-6">
+                    Designed &amp; built with a <span class="text-primary font-mono">backend-first</span> mindset.
+                </p>
+<div class="flex gap-4 justify-center md:justify-start">
+<a class="px-5 py-2.5 bg-primary text-white text-sm font-bold rounded hover:bg-blue-600 transition-colors" href="#">Email Me</a>
+<a class="px-5 py-2.5 bg-background-dark border border-border-dark text-white text-sm font-bold rounded hover:border-primary transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+<div class="text-right text-xs text-border-dark font-mono">
+<div class="mb-1">© 2024 Lucky Dadlani</div>
+<div>Status: 200 OK</div>
+</div>
+</div>
+</footer>
+</main>
+<style>.skill-pill {
+        @apply px-3 py-1.5 rounded text-xs font-mono font-medium bg-background-dark text-slate-300 border border-border-dark;
+    }
+</style>
+
+</body></html>
